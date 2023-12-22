@@ -1,0 +1,119 @@
+table.dataTable {
+    border-collapse: collapse !important;
+    td {
+        border: 1px solid #{$gray-300};
+        padding: 10px;
+    }
+    th {
+        text-wrap: nowrap;
+        border-bottom: transparent !important;
+    }
+    tr {
+        text-wrap: nowrap;
+
+        border-width: 0 !important;
+        > td {
+            &:first-child {
+                border-left: 0px;
+            }
+            &:last-child {
+                border-right: 0px;
+            }
+        }
+
+        &:last-child {
+            td {
+                border-bottom: 0px;
+            }
+        }
+    }
+
+}
+
+.dataTables_wrapper {
+    .dataTables_filter {
+        margin-bottom: 15px;
+    }
+    .dataTables_scroll {
+        padding: 0px;
+        border-radius: 10px;
+        border: 1px solid #{$gray-300};
+
+    }
+    .dataTables_scrollHead {
+        border-radius: 10px 10px 0 0;
+        .dataTables_scrollHeadInner {
+            width: 100% !important;
+            th {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    .dataTables_scrollBody {
+        border-bottom: transparent !important;
+        border-radius: 0 0 10px 10px ;
+        .dataTable {
+            width: 100% !important;
+        }
+    }
+}
+.dataTables_wrapper  {
+    .dataTables_info {
+        color: #{$gray-600};
+        font-size: 14px;
+    }
+    .dataTables_length {
+        label {
+            color: #{$gray-600};
+        }
+        select {
+            color: #{$gray-900};
+            font-weight: bold;
+        }
+    }
+    .dataTables_filter {
+        label {
+            color: #{$gray-400};
+        }
+        input {
+            outline: none;
+            border: 1px solid #{$gray-500};
+            font-size: 14px;
+            color: #{$gray-900};
+            &::placeholder {
+                color: #{$gray-500};
+            }
+        }
+    }
+    .dataTables_paginate {
+        .paginate_button {
+            border-radius: 2px;
+            padding: 5px 12px !important;
+            &.disabled {
+                cursor: no-drop !important;
+                color: #{$gray-300} !important;
+                &:hover {
+                    color: #{$gray-300} !important;
+                    background-color: transparent !important;
+                }
+
+            }
+            &.current {
+                border: 1px solid #{$gray-200} !important;
+                background-color: #{$gray-200} !important;
+            }
+            &:active {
+                // box-shadow: none;
+                box-shadow: inset 0 0 3px #{$gray-400};
+            }
+            &:hover {
+                background: unset !important;
+                border: 1px solid #{$gray-400};
+                background-color: #{$gray-400} !important;
+            }
+
+        }
+    }
+}
+

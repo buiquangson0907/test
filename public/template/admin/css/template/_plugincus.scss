@@ -1,0 +1,130 @@
+/* select 2 */
+
+.select2-container--bootstrap-5 {
+    width: 100% !important;
+    .select2-dropdown .select2-search .select2-search__field:focus {
+        box-shadow: unset;
+    }
+    &.select2-container--focus .select2-selection,
+    &.select2-container--open .select2-selection {
+        box-shadow: unset;
+    }
+    .select2-dropdown .select2-results__options .select2-results__option.select2-results__option--selected,
+    .select2-dropdown .select2-results__options .select2-results__option[aria-selected=true]:not(.select2-results__option--highlighted) {
+        color: #{$gray-900};
+        background-color: #e5f1fd;
+    }
+    .select2-results__option--disabled {
+        background-color: #{$gray-300};
+        color: #{$gray-100} !important;
+        cursor: no-drop;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: 'chưa chọn nhóm quyền';
+            position: absolute;
+            right: -10px;
+            background-color: #{$red};
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 0 5px;
+            font-size: 12px;
+        }
+    }
+}
+
+/* sweetaler2 */
+.swal2-popup.swal2-modal .swal2-icon {
+    height: 4rem !important;
+    width: 4rem !important;
+}
+.swal2-title {
+    padding: 0px !important;
+}
+.swal2-styled {
+    padding: 5px 10px !important;
+}
+
+// tabs
+.wrap-tab {
+    min-height: calc(100vh - 240px);
+    &.tab-column{
+        display: flex;
+        .btn-tabs {
+            flex-direction: column;
+            flex-basis: 300px;
+            .btn-tab {
+                margin-right: 0px;
+                &.active {
+                    position: sticky;
+                    top: 10px;
+                }
+            }
+        }
+    }
+    .btn-tabs {
+        width: 100%;
+        margin-top: 10px;
+        .btn-tab {
+            background-color: #{$gray-500};
+            color: #{$gray-100};
+            padding: 10px 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            &.active {
+                background-color: #{$blue};
+                color: #{$white};
+                position: relative;
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    right: -5px;
+                    width: 5px;
+                    height: 80%;
+                    background-color: #{$gray-200};
+                    border-radius: 0 2px 2px 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+            }
+        }
+    }
+    .tab-content {
+        width: 100%;
+        width: auto;
+        flex-grow: 1;
+        margin-top: 10px;
+        margin-left: 20px;
+        padding: 10px;
+        border: 1px solid #{$gray-200};
+        border-radius: 10px;
+    }
+}
+/* tinymce */
+.tox-promotion,.tox-statusbar__branding{
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+}
+@media screen and (max-width: 1365px) {
+    .wrap-tab {
+        &.tab-column{
+            all:unset;
+            .btn-tabs {
+                flex-direction: row;
+                .btn-tab {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .tab-content {
+            margin-left: unset;
+        }
+    }
+}
+

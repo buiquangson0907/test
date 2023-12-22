@@ -1,0 +1,58 @@
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+
+:root {
+    --color-main: #e10034;
+    --color-main-hover: #b41f24;
+    --color-main-sub: #0d6efd;
+
+    --text-success: #198754;
+    --text-primary: #0d6efd;
+    --text-warning: #ffc107;
+}
+$text-light: #fff;
+$color-main: var(--color-main);
+$color-main-hover: var(--color-main-hover);
+$color-main-sub: var(--color-main-sub);
+$width-main : 1650px;
+$width-menu: 260px;
+$box-shadow: 0px 1px 10px 0px rgba(0,0,0,.15);
+$box-shadow-1: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);
+$bg-rbga : 'rgba(214, 214, 214, 0.1)';
+
+$text-success: var(--text-success);
+$text-primary: var(--text-primary);
+$text-warning: var(--text-warning);
+@import "../css/template/general";
+@import "../css/template/header";
+@import "../css/template/global-menu";
+@import "../css/template/banner";
+@import "../css/template/home";
+@import "../css/template/product/product-item";
+@import "../css/template/footer";
+
+@import "../css/template/category";
+@import "../css/template/product-detail";
+@import "../css/template/build-pc-modal";
+@import "../css/template/responsive";
+@import "../css/plus/shine";

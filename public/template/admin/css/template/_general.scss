@@ -1,0 +1,165 @@
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #{$gray-400};
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #{$gray-300};
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #{$gray-400};
+    width: 10px;
+}
+.form-control:focus , .form-select:focus {
+    box-shadow: 0 0 0 0.1rem #{$blue}55;
+}
+textarea::placeholder, input::placeholder {
+    color: #{$gray-400} !important;
+}
+.popover {
+    border: 1px solid #{$gray-300};
+    .popover-header {
+        background-color: #{$gray-200};
+        border-bottom: 0;
+    }
+    .btn-popover {
+        &:hover {
+            color: #{$orange};
+        }
+    }
+}
+
+.tooltip {
+    --bs-tooltip-bg: #{$gray-600} !important;
+    --bs-tooltip-border-radius: #{$gray-600} !important;
+}
+// cursor
+.pointer {
+    cursor: pointer;
+}
+// card
+.card {
+    border: 1px solid #{$gray-200} !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 10px;
+        background-color: #{$gray-200};
+        border-bottom: 1px solid #{$gray-100} !important;
+        .card-header__title {
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        .card-header__end {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .btn-a {
+                margin-right: 10px !important;
+                text-decoration: none;
+                i {
+                    color: #{$black};
+                }
+            }
+            .btn-div {
+                margin-right: 5px;
+                padding: 7px 10px;
+                font-size: 14px;
+                background-color: #{$gray-500};
+                color: #{$gray-100};
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0 0 4px #{$gray-900}50;
+                    transform: scale(1.01);
+                }
+            }
+        }
+    }
+    .card-body {
+        padding: 10px 10px;
+        .card-body__border {
+            border-top: 1px solid #{$gray-500};
+            border-radius: 5px;
+            padding: 15px 5px;
+        }
+    }
+}
+// modal
+.modal {
+    .modal-header,.modal-footer {
+        padding: 0.5rem 1rem;
+        background-color: #{$gray-100};
+     }
+}
+// table
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-bg-type: #{$gray-100};
+}
+// img
+.db-img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+}
+.popover-img {
+    width: 100%;
+    max-width: 300px;
+}
+/* form check */
+.form-check-input:checked.check-danger {
+    background-color: rgb(var(--bs-danger-rgb)) !important;
+    border-color: rgb(var(--bs-danger-rgb)) !important;
+}
+.form-check-input:checked.check-danger + .form-check-label {
+    color: rgb(var(--bs-danger-rgb)) !important;
+}
+.form-check-input:checked.check-primary {
+    background-color: rgb(var(--bs-primary-rgb)) !important;
+    border-color: rgb(var(--bs-primary-rgb)) !important;
+}
+.form-check-input:checked.check-primary + .form-check-label {
+    color: rgb(var(--bs-primary-rgb)) !important;
+}
+
+.form-check-input:checked.check-warning {
+    background-color: rgb(var(--bs-warning-rgb)) !important;
+    border-color: rgb(var(--bs-warning-rgb)) !important;
+}
+.form-check-input:checked.check-warning + .form-check-label {
+    color: rgb(var(--bs-warning-rgb)) !important;
+}
+
+@media (max-width: 768px) {
+    .card {
+        .card-header {
+            flex-direction: column;
+            .card-header__title {
+                margin-bottom: 10px;
+            }
+            .card-header__end {
+                justify-content: flex-end;
+                .btn-div {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .container-fluid {
+        padding: 5px;
+    }
+}

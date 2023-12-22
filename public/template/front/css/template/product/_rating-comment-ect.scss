@@ -1,0 +1,255 @@
+.iframe-wrap {
+    iframe {
+
+        display: block;
+        width: 100% ;
+        height: 500px;
+        max-width: 100%;
+    }
+}
+.box-review {
+    background-color: #{$text-light};
+    border: 1px solid #{$gray-300};
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .box-review__start {
+        text-align: center;
+        width: 20%;
+        padding: 10px;
+        .star__title {
+            font-size: 18px;
+            color: #{$gray-800};
+        }
+        .star__num {
+            font-size: 30px;
+            color: #{$text-warning};
+        }
+    }
+    .box-review__middle {
+        width: 60%;
+        padding: 10px;
+        border-right: 1px solid #{$gray-900};
+        border-left: 1px solid #{$gray-900};
+        .star__list {
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+            .star__list-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i {
+                    color: #{$text-warning};
+                }
+                span {
+                    text-wrap: nowrap;
+                }
+            }
+            .style__progress {
+                height: 10px;
+                width: 60%;
+                margin: 0 5px;
+            }
+            .style__progress-bar {
+                background-color: #{$text-warning};
+            }
+        }
+    }
+    .box-review__end {
+        padding: 10px;
+        width: 20%;
+        .dialog-review {
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #{$gray-600};
+        }
+        .btn-show-review {
+            background-color: #{$color-main};
+            color: #{$text-light};
+            border-radius: 5px;
+            box-shadow: #{$box-shadow};
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .box-review__rating {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 2px dashed #{$gray-600};
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        .close-rating {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            i {
+                color: #{$color-main};
+                font-size: 20px;
+                &:hover {
+                    color: #{$color-main-hover};
+                }
+            }
+        }
+        .rating-top {
+            display: flex;
+            padding: 0 5px;
+            .rating-top__title {
+                margin-right: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+    .rating-form {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        min-height: 150px;
+        .rating-form__start,.rating-form__end {
+            padding:5px;
+            width: calc(50%);
+        }
+
+        .rating-form__end {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+.box-qa {
+    border: 1px solid #{$gray-300};
+    border-radius: 10px;
+    background-color: #{$gray-200};
+    margin-top: 15px;
+    padding: 10px;
+    .box-title__sub {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .box-qa__comment {
+        .comment-form {
+            display: flex;
+            height: 100px;
+            .comment-form__start {
+                flex-grow: 1;
+            }
+            .comment-form__end {
+                display: flex;
+                align-items: flex-start;
+                padding: 5px;
+                .form-input {
+                    height: unset;
+                    min-width: 120px;
+                }
+            }
+        }
+        .comment-list {
+            margin-top: 10px;
+            border-top: 1px solid #{$gray-300};
+        }
+        .comment-item > .comment-item {
+            margin-left: auto;
+            width: calc(100% - 25px);
+        }
+        .cm-item__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .cm-item__info-start {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            .info__name {
+                margin-left: 10px;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .info__tag {
+                margin-left: 10px;
+                font-size: 12px;
+                background-color: #{$color-main};
+                color: #{$text-light};
+                padding: 0px 5px;
+                border-radius: 3px;
+            }
+        }
+        .cm-item__info-end {
+            display: flex;
+            align-items: center;
+            color: #{$gray-500};
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .cm-item__question {
+            background-color: #{$text-light};
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin-left: auto;
+            width: calc(100% - 25px);
+            .btn-reply {
+                color: #{$color-main};
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: bold;
+                display: inline;
+                position: relative;
+                &:hover {
+                    color: #{$color-main-hover};
+                }
+                i {
+                    font-size: 12px;
+                    position: absolute;
+                    top: -2px;
+                    right: 102%;
+                }
+            }
+        }
+        // .cm-item__question-content
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+    .box-review {
+        margin-top: 15px !important;
+        padding: 0px !important;
+        .box-review__start {
+            width: 40%;
+        }
+        .box-review__middle {
+            width: 60%;
+            border-right: none;
+        }
+        .box-review__end {
+            width: 100%;
+        }
+        .rating-form {
+            flex-wrap: wrap;
+            .rating-form__start,.rating-form__end {
+                width: calc(100%) !important;
+            }
+        }
+    }
+    .form-input {
+        height: auto;
+        width: 100%;
+        margin-top: 5px;
+        min-width: 60px !important;
+    }
+}

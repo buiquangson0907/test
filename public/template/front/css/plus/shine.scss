@@ -1,0 +1,39 @@
+$shine-duration: 3; // in seconds
+.shine {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#FFF, .4) //#{$white}77;
+    }
+    &.shine-anim {
+        &::before {
+            animation: shine #{$shine-duration}s ease-in-out infinite;
+        }
+    }
+}
+
+
+// @each $color, $value in $custom-colors {
+//     .btn-shine-#{$color} {
+//         position: relative;
+//     }
+// }
+@keyframes shine {
+    0% {
+        left: -100%;
+        transition-property: left;
+    }
+    50% {
+        left: 0%;
+        transition-property: left;
+    }
+    100% {
+        left: 100%;
+        transition-property: left;
+    }
+}

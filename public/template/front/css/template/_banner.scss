@@ -1,0 +1,118 @@
+.nav-banner {
+
+    align-self: baseline;
+    .banner-above {
+        display: flex;
+        flex-wrap: nowrap;
+        width: calc(#{$width-main} - #{$width-menu} - 20px);
+    }
+
+    .banner-start {
+        border-radius: 5px;
+        flex-grow: 1;
+        padding: 0px 5px;
+        overflow: hidden;
+        &:has(.banner-bottoms) {
+            .banner-bottoms a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 130px !important;
+                overflow: hidden;
+                padding: 0;
+                border: 1px solid #{$bg-rbga};
+                border-radius: 5px;
+            }
+            & + .banner-end {
+                a {
+                    width: 400px !important;
+                }
+            }
+        }
+        .banner-bottoms {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 0px;
+            a {
+                // width: calc((100% / 3) - 10px);
+                flex: 1 1 auto;
+                padding:0 5px;
+            }
+            img {
+                border-radius: 7px;
+            }
+        }
+    }
+    .banner-slider {
+        overflow: hidden;
+        background-color: #{$bg-rbga};
+        border-radius: 5px;
+        max-height: 450px;
+        .p-img {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            height: 450px;
+            img {
+                border-radius: 5px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .banner-end {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        min-height: 450px;
+        a {
+            min-width: 300px;
+            padding: 5px 0px 0 0px;
+
+            &:first-child {
+                padding-top: 0px;
+            }
+            img {
+                border-radius: 5px;
+            }
+        }
+    }
+    .banner-under {
+        display: flex;
+        width: 100%;
+        margin-top: 0px;
+        padding-left: 5px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width: calc(25% - 10px);
+            flex: 1 1 auto;
+            overflow: hidden;
+            padding: 0;
+            border: 1px solid #{$bg-rbga};
+            border-radius: 5px;
+            height: 150px !important;
+        }
+        img {
+            border-radius: 7px;
+        }
+    }
+
+}
+.slick-arrow {
+    z-index: 1;
+    &.slick-prev {
+        left: 0;
+    }
+    &.slick-next {
+        right: 0;
+    }
+}
+
+
+
+
